@@ -16,10 +16,12 @@ class GroceriesTest {
 
     @Test
     void testProducts() {
+        // the test should be isolated. We should create or mock all resources here but we shouldn't call the objects directly
         products();
 
         List<ProductShop> testGroceriesList = new ArrayList<>();
         testGroceriesList.add(new ProductShop("Apple", 1.25, "A"));
+
 
         assertEquals(testGroceriesList.get(0).getName(), groceriesList.get(0).getName());
         assertEquals(testGroceriesList.get(0).getPrice(), groceriesList.get(0).getPrice());

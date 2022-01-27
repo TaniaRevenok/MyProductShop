@@ -17,10 +17,12 @@ class UtilsTest {
 
     @BeforeEach
     void startProductsMethod() {
+        // the test should be isolated. We should create or mock all resources here, but we shouldn't call the objects directly
         products();
     }
 
     @AfterEach
+    //where is the productCodesAndQuantity object? We shouldn't use any resources directly
     void clearProductCodesAndQuantity() {
         productCodesAndQuantity.clear();
     }
@@ -72,6 +74,7 @@ class UtilsTest {
     @Test
     void testGetTotalCost() {
         getCountProducts("AAAAAABBCCCDD");
+        //what happens here? Each method return double value but we don't use it
         getProductsCost("A", 6, 20);
         getProductsCost("B", 0, 0);
         getProductsCost("C", 3, 10);
@@ -91,6 +94,6 @@ class UtilsTest {
     }
     @Test
     void getPriceByProductCode_NO_NULL() {
-
+    // empty?
     }
 }
