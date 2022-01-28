@@ -92,8 +92,7 @@ class UtilsTest {
         double actual = calculateTotalCost("AAAAAABBCCCDD");
         assertEquals(expected, actual);
     }
-    @Test
-    void getPriceByProductCode_NO_NULL() {
-    // empty?
+
+  
     }
 }
