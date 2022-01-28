@@ -91,8 +91,7 @@ class UtilsTest {
         double expected = 22.64;
         double actual = calculateTotalCost("AAAAAABBCCCDD");
         assertEquals(expected, actual);
-    }
-
+    
   
     }
 }
